@@ -8,6 +8,7 @@ module.exports = {
   // the app entry point is /src/index.js
   entry: path.resolve(__dirname, 'src', 'index.jsx'),
   output: {
+    publicPath: '',
     // the output of the webpack build will be in /dist directory
     path: path.resolve(__dirname, 'dist'),
     // the filename of the JS bundle will be bundle.js
@@ -33,13 +34,25 @@ module.exports = {
       },
       {
         test: /\.css?$/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader",
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+              publicPath: "",
+            },
+          },
+          "css-loader"]
       },
       { // config for sass compilation
         test: /\.scss$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+              publicPath: "",
+            },
           },
           'css-loader',
           {
