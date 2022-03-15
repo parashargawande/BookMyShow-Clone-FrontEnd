@@ -3,9 +3,9 @@ import './home.scss'
 import Header from '../../components/header/header'
 import HorizontalList from '../../components/RecommendedMovies/RecomendedMovies'
 import QuickAccessBar from '../../components/quickAccessBar/quickAccessBar'
-import Spacer from "../../components/spacer";
+import Spacer from "../../components/Spacer";
 
-const Explore = (props) => {
+const Home = (props) => {
     return (
         <div className="home-container">
             <Header />
@@ -19,4 +19,4 @@ const Explore = (props) => {
         </div>
     )
 }
-export default Explore;
+export default Home;

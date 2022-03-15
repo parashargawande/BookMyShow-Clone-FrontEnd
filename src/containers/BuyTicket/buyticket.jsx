@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import PopupBox from '../../components/popupBox/popupBox';
-import Spacer from '../../components/spacer';
+import PopupBox from '../../components/PopupBox/PopupBox';
+import Spacer from '../../components/Spacer';
 import './buyticket.scss'
 
 
