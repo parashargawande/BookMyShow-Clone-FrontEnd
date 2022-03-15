@@ -4,14 +4,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   // the output bundle won't be optimized for production but suitable for development
-  mode: 'development',
+  // mode: process.env.NODE_ENV || 'development',
   // the app entry point is /src/index.js
   entry: path.resolve(__dirname, 'src', 'index.jsx'),
   output: {
+    publicPath: '',
     // the output of the webpack build will be in /dist directory
     path: path.resolve(__dirname, 'dist'),
     // the filename of the JS bundle will be bundle.js
-    filename: 'bundle[fullhash].js'
+    filename: 'bundle.js'
   },
   devtool: 'inline-source-map',
   module: {
@@ -33,13 +34,25 @@ module.exports = {
       },
       {
         test: /\.css?$/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader",
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+              publicPath: "",
+            },
+          },
+          "css-loader"]
       },
       { // config for sass compilation
         test: /\.scss$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+              publicPath: "",
+            },
           },
           'css-loader',
           {
@@ -77,7 +90,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "assets/css/[name].[contenthash:8].css",
       chunkFilename: "assets/css/[name].[contenthash:8].chunk.css"
-    })
+    }),
   ],
   devServer: {
     compress: true,

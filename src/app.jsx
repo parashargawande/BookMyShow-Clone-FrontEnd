@@ -1,9 +1,9 @@
 
 import React from "react";
-import Home from "./containers/home/home";
+import Home from "./containers/Home/home";
 import { Route, Link, Routes, HashRouter as Router } from 'react-router-dom'
-import BuyTicket from "./containers/buyTicket/buyticket";
-import SeatLayout from "./containers/seatLayout/seatLayout";
+import BuyTicket from "./containers/BuyTicket/buyticket";
+import SeatLayout from "./containers/SeatLayout/SeatLayout";
 
 const App = (props) => {
     return <>
