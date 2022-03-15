@@ -1,0 +1,63 @@
+.popup-screen {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000b3;
+
+  .popup-container {
+    box-shadow: 1px 4px 24px;
+    background: #dddddd;;
+  }
+  .title {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: larger;
+    font-size: larger;
+    font-family: "Google Sans";
+    font-weight: 600;
+    font-family: "Roboto";
+  }
+  .body {
+    max-width: 300px;
+    overflow-y: scroll;
+    max-height: 120px;
+    font-family: "Roboto";
+    padding: 0px 40px;
+  }
+
+  .body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    background: white;
+    padding: 11px 0px;
+    .cancel {
+        display: inline;
+        padding: 10px 35px;
+        border: 1px solid;
+        border-radius: 10px;
+        color: rgb(248, 68, 100);
+        font-family: 'Roboto';
+        font-weight: 500;
+        
+    }
+    .okaybtn {
+        background: rgb(248, 68, 100);
+    border-radius: 5px;
+    padding: 10px 10px;
+    padding: 10px 35px;
+    color: white;
+    font-size: large;
+    font-family: 'Roboto';
+    font-weight: 500;
+    }
+  }
+}

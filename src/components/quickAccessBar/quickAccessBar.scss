@@ -1,0 +1,32 @@
+.quick-access-bar-container {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid rgb(238, 238, 238);
+  justify-content: space-evenly;
+  padding: 10px 0px;
+  z-index: 10;
+  background: white;
+
+  .icon-container {
+    .icon {
+      width: 24px;
+      height: 24px;
+      margin: 0px auto;
+      text-align: center;
+    }
+    .text {
+      margin: 0px auto;
+      font-size: 10px;
+      letter-spacing: 0.12px;
+      // color: rgb(220, 53, 88);
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .quick-access-bar-container {
+    display: none;
+  }
+}
