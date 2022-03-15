@@ -101,7 +101,7 @@ const SeatLayout = (props) => {
                 <tbody className="table-body">
                     <tr>
                         <td colSpan={2}>
-                            <div className="category-name">Royal Sofa</div>
+                            <div onClick={()=>alert()} className="category-name">Royal Sofa</div>
                         </td>
                     </tr>
                     {
