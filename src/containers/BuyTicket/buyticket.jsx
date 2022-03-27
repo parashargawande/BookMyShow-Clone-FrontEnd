@@ -11,17 +11,20 @@ const BuyTicket = (props) => {
     console.log(params);
 
     const [showPopup, setShowPopup] = useState(false)
-    
+    const okayHandler = () => {
+        window.location.href = '/#/seatlayout'
+    }
+
     return <div className="buyticket-container">
         <div className="buyticket-top">
             <div className="header-container">
                 <div className="left-section">
-                    <div className="back-icon">i</div>
+                    {/* <div className="back-icon">i</div> */}
                     <div className="movie-title">Title</div>
                 </div>
                 <div className="right-section">
-                    <div className="search-icon">i</div>
-                    <div className="filtericon">i</div>
+                    {/* <div className="search-icon">i</div> */}
+                    {/* <div className="filtericon">i</div> */}
                 </div>
             </div>
             <div className="time-container">
@@ -61,7 +64,8 @@ const BuyTicket = (props) => {
 
         <PopupBox
             hidden={showPopup}
-            setHidden={setShowPopup} />
+            setHidden={setShowPopup}
+            okayHandler={okayHandler} />
     </div>
 }
 export default BuyTicket

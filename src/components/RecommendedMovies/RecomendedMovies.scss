@@ -1,4 +1,16 @@
 .home-movies {
+  .movie-row {
+    display: flex;
+    align-items: center;
+
+    .scroll-btn {
+      position: relative;
+      left: 95%;
+      border: 1px solid;
+      border-radius: 3px;
+    }
+  }
+
   .header-container {
     display: flex;
     padding: 0px 10px;

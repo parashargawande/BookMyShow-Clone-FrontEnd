@@ -13,7 +13,7 @@ const PopupBox = (props) => {
                 <div onClick={()=>{props.setHidden(false)}} className="cancel">
                     Cancel
                 </div>
-                <div className="okaybtn">
+                <div onClick={()=>{props.okayHandler()}} className="okaybtn">
                     Okay
                 </div>
             </div>
